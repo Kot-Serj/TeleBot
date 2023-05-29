@@ -14,7 +14,7 @@ def get_weather(message):
     city_name = message.text.strip().lower() #переменная для функции
     if get_temp_and_date(city_name):
         weather_message = (
-            f"Данные по  городу  {city_name.title()}: \nТемпература {(get_temp_and_date(city_name))['temperature']}\n" 
+            f"Данные по  городу  {city_name.title()}: \nТемпература {(get_temp_and_date(city_name))['temperature']}: {(get_temp_and_date(city_name))['status']}\n" 
             f"Влажность: {(get_temp_and_date(city_name))['humidity']}\n" 
             f"Давление: {(get_temp_and_date(city_name))['pressure']} \n" 
             f"Скорость ветра: {(get_temp_and_date(city_name))['wind_speed']}\n" 
