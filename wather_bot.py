@@ -21,7 +21,7 @@ def get_weather(message):
                 f"Давление: {(get_temp_and_date(city_name))['pressure']} \n" 
                 f"Скорость ветра: {(get_temp_and_date(city_name))['wind_speed']}\n" 
                 f"Дата и время: {(get_temp_and_date(city_name))['date']}\n"
-                f"Дата и время и температура в полночь  : {(get_temp_and_date_night(city_name))['night_time'], (get_temp_and_date_night(city_name))['cur_tem']}"
+                f"Температура в полночь: {(get_temp_and_date_night(city_name))['cur_tem']}"
             )
     else:
         weather_message = f"Извините, не удалось получить данные о погоде в городе {city_name.title()}. Пожалуйста, проверьте правильность названия города и попробуйте еще раз."
