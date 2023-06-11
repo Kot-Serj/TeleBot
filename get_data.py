@@ -24,5 +24,21 @@ def get_temp_and_date(city_name : str ):
     except:
         return None
 
+def get_temp_and_date_night(city_name : str ):
+    try:
+        q = requests.get(f'https://api.openweathermap.org/data/2.5/forecast?q={city_name}&cnt=10&lang=ru&units=metric&appid={api}')
+        data = q.json()
+        for forecast in data["list"]:
+            date, time = forecast["dt_txt"].split(" ")
+            if time == "00:00:00":
+                night=(forecast["dt_txt"])
+                cur_temper = forecast["main"]["temp"]
+                return {
+                    'night_time': night,
+                    'cur_tem': cur_temper
+                }
+    except:
+        return None
+
 
     
