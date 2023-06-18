@@ -1,5 +1,5 @@
 import datetime
-def log(message): # эта функция была взята из отурый источников
+def log(message): # эта функция была взята из открый источников
 
     dtn = datetime.datetime.now()
     botlogfile = open('watherbot.log', 'a', encoding="utf8")
